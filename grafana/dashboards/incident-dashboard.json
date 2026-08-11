@@ -1,0 +1,26 @@
+{
+ "title":"AI Incident Analyst",
+
+ "panels":[
+
+  {
+
+   "title":"All Logs",
+
+   "type":"logs",
+
+   "targets":[
+
+    {
+
+     "expr":"{job=~\".+\"}"
+
+    }
+
+   ]
+
+  }
+
+ ]
+
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Incident Analyst</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div>
+
+        <h1>AI Incident Analyst</h1>
+
+        <p>
+            Security Incident Dashboard
+        </p>
+
+    </div>
+
+    <div id="status">
+        ● Connexion...
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <section class="stats">
+
+
+        <div class="card">
+
+            <h3>Total</h3>
+
+            <div id="total">
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card critical">
+
+            <h3>Critical</h3>
+
+            <div id="critical">
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card high">
+
+            <h3>High</h3>
+
+            <div id="high">
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card medium">
+
+            <h3>Medium</h3>
+
+            <div id="medium">
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card low">
+
+            <h3>Low</h3>
+
+            <div id="low">
+                0
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>
+            Incidents récents
+        </h2>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+
+                    <th>Source</th>
+
+                    <th>Type</th>
+
+                    <th>Sévérité</th>
+
+                    <th>Description</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="incidentTable">
+
+            </tbody>
+
+        </table>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

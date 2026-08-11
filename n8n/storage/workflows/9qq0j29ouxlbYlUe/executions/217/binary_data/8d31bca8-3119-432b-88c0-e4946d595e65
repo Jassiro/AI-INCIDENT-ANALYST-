@@ -1,0 +1,11 @@
+
+<h1>Rapport d'Incident SOC</h1>
+<p><b>Date :</b> 2026-08-02T14:21:29.222Z</p>
+<p><b>Type d'incident :</b> API Gateway failing to serve user resource</p>
+<p><b>Sévérité :</b> Medium</p>
+<p><b>Cause probable :</b> 404 Not Found error for the /users endpoint, suggesting that it does not exist on server or misconfiguration in Nginx.</p>
+<p><b>Recommandations :</b> Verify if '/users' is correctly defined and accessible within API Gateway routes. Check web application configuration files like nginx for any errors related to routing.</p>
+<h3>Logs concernés</h3>
+<pre>[1785680350794964331] (nginx) 172.23.0.1 - - [02/Aug/2026:14:19:10 +0000] "GET /users HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+[1785680350544176056] (nginx) 172.23.0.1 - - [02/Aug/2026:14:19:10 +0000] "GET /users HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+[1785680350544140200] (nginx) 172.23.0.1 - - [02/Aug/2026:14:19:10 +0000] "GET /users HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"</pre>

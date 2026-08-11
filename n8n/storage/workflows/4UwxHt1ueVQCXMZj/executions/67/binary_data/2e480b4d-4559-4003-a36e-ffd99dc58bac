@@ -1,0 +1,9 @@
+
+<h1>Rapport d'Incident SOC</h1>
+<p><b>Date :</b> 2026-08-01T13:07:36.755Z</p>
+<p><b>Type d'incident :</b> Undetectable Incident due to Malformed/Undefined Logs</p>
+<p><b>Sévérité :</b> Medium</p>
+<p><b>Cause probable :</b> The provided log entries were 'undefined', preventing any meaningful security analysis or identification of specific events. This indicates a potential issue with log generation, collection, or forwarding mechanisms.</p>
+<p><b>Recommandations :</b> Immediately investigate the source system or logging infrastructure responsible for generating or presenting 'undefined' log entries. Ensure proper log collection, formatting, and retention are configured correctly. Implement robust log validation to prevent processing of malformed data and ensure continuous visibility into security events.</p>
+<h3>Logs concernés</h3>
+<pre>[undefined] (undefined) undefined</pre>

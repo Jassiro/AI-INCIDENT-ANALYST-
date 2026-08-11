@@ -1,0 +1,19 @@
+apiVersion: 1
+
+
+providers:
+
+
+- name: incident-dashboard
+
+
+  folder: AI Incident Analyst
+
+
+  type: file
+
+
+  options:
+
+
+    path: /var/lib/grafana/dashboards

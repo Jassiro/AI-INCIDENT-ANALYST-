@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:47:32.897Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    404
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity high">
+      High
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    Multiple requests to the same URL
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Analyze the logs for a pattern indicating multiple identical 404 errors or an overall high occurrence of 404 errors.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786376672450662727] (nginx) 172.23.0.1 - - [10/Aug/2026:15:44:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<h1>Rapport d'Incident SOC</h1>
+<p><b>Date :</b> 2026-08-02T13:58:06.844Z</p>
+<p><b>Type d'incident :</b> [1785678928407616799] (apache),[1785678930543693188] (api),[1785678930543267442] (api),[1785679002115554773] (nginx),[1785678997338298149] (nginx)</p>
+<p><b>Sévérité :</b> Medium</p>
+<p><b>Cause probable :</b> The requested resources for the favicon.ico and /users, as well as for the non-existent /admin paths were not found.</p>
+<p><b>Recommandations :</b> Ensure that all critical web assets are correctly located in their designated directories, correct redirections from old to new paths if necessary and review custom error pages for user experience.</p>
+<h3>Logs concernés</h3>
+<pre>[1785678928407616799] (apache) 172.23.0.1 - - [02/Aug/2026:13:55:28 +0000] "GET /favicon.ico HTTP/1.1" 404 236 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+[1785678930543693188] (api) 2026-08-02 13:55:30,393 172.23.0.1 - - [02/Aug/2026 13:55:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[1785678930543267442] (api) 2026-08-02 13:55:30,391 404 REQUEST IP=172.23.0.1 URL=http://localhost:5000/favicon.ico
+[1785679002115554773] (nginx) 172.23.0.1 - - [02/Aug/2026:13:56:41 +0000] "GET /users HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+[1785678997338298149] (nginx) 172.23.0.1 - - [02/Aug/2026:13:56:37 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"</pre>

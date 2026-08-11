@@ -1,0 +1,115 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+
+positions:
+  filename: /tmp/positions.yaml
+
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+
+scrape_configs:
+
+# =====================
+# NGINX
+# =====================
+
+  - job_name: nginx_access
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: nginx
+          type: web_access
+          __path__: /logs/nginx/*.log
+
+
+# =====================
+# APACHE
+# =====================
+
+  - job_name: apache_access
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: apache
+          type: web_access
+          __path__: /logs/apache/*.log
+
+
+# =====================
+# API FLASK
+# =====================
+
+  - job_name: api_access
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: api
+          type: api_access
+          __path__: /logs/api/*.log
+
+
+# =====================
+# VPN
+# =====================
+
+  - job_name: vpn_access
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: vpn
+          type: authentication_access
+          __path__: /logs/vpn/*.log
+
+
+# =====================
+# FTP
+# =====================
+
+  - job_name: ftp_access
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: ftp
+          type: file_access
+          __path__: /logs/ftp/*.log
+
+
+# =====================
+# MYSQL
+# =====================
+
+  - job_name: mysql_audit
+
+    static_configs:
+      - targets:
+          - localhost
+
+        labels:
+          job: access_logs
+          source: mysql
+          type: database_access
+          __path__: /logs/mysql/*.log

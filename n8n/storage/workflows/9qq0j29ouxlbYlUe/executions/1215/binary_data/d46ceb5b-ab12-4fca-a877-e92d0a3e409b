@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #1f2937;
+    }
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .high {
+      color: #b91c1c;
+    }
+    .medium {
+      color: #b45309;
+    }
+    .critical {
+      color: #7f1d1d;
+    }
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Rapport d'Incident SOC</h1>
+  <p><b>Date :</b> 2026-08-10T16:47:43.786Z</p>
+  <p><b>Type d'incident :</b> UNKNOWN</p>
+  <p><b>Sévérité :</b> <span class="severity unknown">UNKNOWN</span></p>
+  <h3>Cause probable</h3>
+  <p>{
+  "incident": "Une seule requête GET /login qui a des codes HTTP 404 (Not Found).",
+  "cause": "Rappeval d'une erreur 404.",
+  "severity": "Low",
+  "recommendation": "La réponse est une erreur 404. Pour résoudre cette situation, il faut vérifier la configuration de l'application web et vérifier si les URLs dans la requête sont correctement configurées. Si vous ne connaissez pas la source de l'erreur, nous recommandons d'examiner le log pour obtenir une meilleure idée.",
+  "source": "Lorsque plusieurs requêtes GET /login ont des codes HTTP 404 et que les URLs sont cohérents entre elles, cela indique probablement un problème d'accès sécurisé à l'application web. Les sources de cette erreur peuvent être diverses, tels que :
+- l'accès Internet
+- l’accès d'un service tiers non autorisés
+
+Pour résoudre ce type de problèmes, il est important de vérifier la configuration de l'application web et de consulter le log pour obtenir des informations plus précises sur les erreurs. Si vous ne connaissez pas comment procéder, nous recommandons d'examiner attentivement les URLs des requêtes GET /login et d'examiner l'accès au service à l'intérieur des pages Web pour vérifier si il s'agit d'une erreur de sécurité ou d'un problème d'accès."
+}</p>
+  <h3>Recommandation</h3>
+  <p>Vérification manuelle requise</p>
+  <h3>Logs concernés</h3>
+  <pre>[1786380431223003970] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:11 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786380430970682199] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:10 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786380430970654408] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:10 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786380430718410363] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:10 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786380430466312022] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:10 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786380430214821142] (apache) 172.23.0.1 - - [10/Aug/2026:16:47:10 +0000] "GET /login HTTP/1.1" 404 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+</div>
+</body>
+</html>

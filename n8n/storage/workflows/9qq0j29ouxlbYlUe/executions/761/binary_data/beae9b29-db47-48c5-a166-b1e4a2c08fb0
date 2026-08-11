@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:40:15.511Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Une requête GET à / a été effectuée et a été reçue avec un status code de 304 (entraînée), indiquant que l'URL est disponible.
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity high">
+      High
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    Cette requête a été reçue dans le contexte d'une URL qui n'a pas changé depuis une certaine date ou que les réponses précédentes sont encore correctes. Cela peut signifier qu'elle a été reçue pendant un temps sans problèmes ou pourrait être l'interprétation de l'abandon du serveur.
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    La requête est à surveiller, mais elle semble se maintenir correctement. Pour plus d'informations, nous recommandons de vérifier si la URL est en bonne santé.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786376305581254506] (nginx) 172.23.0.1 - - [10/Aug/2026:15:38:25 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

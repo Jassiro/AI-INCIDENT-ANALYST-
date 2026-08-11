@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Rapport Incident SOC</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 30px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #1f2937;
+}
+
+.severity {
+  font-weight: bold;
+}
+
+.high {
+  color: #b91c1c;
+}
+
+.medium {
+  color: #b45309;
+}
+
+.critical {
+  color: #7f1d1d;
+}
+
+.low {
+  color: #15803d;
+}
+
+pre {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Rapport d'Incident SOC</h1>
+
+<p>
+<b>Date :</b>
+2026-08-11T08:45:27.826Z
+</p>
+
+<p>
+<b>Incident :</b>
+Une erreur HTTP 404 sur l'URL /favicon.ico est détectée sur l'interface web apache.
+</p>
+
+<p>
+<b>Sévérité :</b>
+
+<span class="severity low">
+LOW
+</span>
+
+</p>
+
+<p>
+<b>Source :</b>
+apache
+</p>
+
+<p>
+<b>Nombre de logs :</b>
+1
+</p>
+
+<h3>Cause probable</h3>
+
+<p>
+La connexion vers le serveur Apache a été interrompue, ce qui signifie que la page /favicon.ico n'a pas été trouvé. Cela pourrait être une anomalie de la part d'un administrateur ou un utilisateur.
+</p>
+
+<h3>Recommandation</h3>
+
+<p>
+Il est recommandé de vérifier les conditions d'accès à l'interface web et de contacter le développeur pour identifier l'origine exacte de la page 404. Si possible, nous devrions également ajouter une page 503 en lien avec l'erreur et demander aux administrateurs d'ajuster les conditions d'accès.
+</p>
+
+<h3>Logs concernés</h3>
+
+<pre>
+[1786437917376116090] (apache) 172.23.0.1 - - [11/Aug/2026:08:45:17 +0000] "GET /favicon.ico HTTP/1.1" 404 236 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+</pre>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:20:24.010Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Une requête de / est retournée avec un status HTTP 304 (neuf fois), qui indique que l'URL n'a pas été modifiée depuis le dernier appel. Cela pourrait être une source de la confusion ou un problème d'accès à cette URL.
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity high">
+      High
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    Le problème est causé par un statut HTTP 304, signifiant qu'il n'y a pas de modification effectuée sur la page spécifique. C'est peut-être l'indicateur idéal d'un problème non ressenti et indique que le site est en état normal ou qu'il n'y a pas encore eu de demandes à ce site.
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Si vous observez un statut HTTP 304, il est important de vérifier si une autre URL à laquelle l'indiquant a été modifiée. Cela pourrait être une source de confusion ou d'un problème d'accès.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786374391642027337] (nginx) 172.23.0.1 - - [10/Aug/2026:15:06:31 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

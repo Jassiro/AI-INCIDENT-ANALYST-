@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T16:20:53.595Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Une source spécifique a généré un 404 non trouvé.
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity high">
+      High
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    La source semble être la même que l'URL, donc elle est probablement à cause de son propre problème (dans ce cas, cela pourrait être une source local).
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Veuillez vérifier les URL et le contenu de l’HTTP pour trouver un autre problème.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786378610968056051] (nginx) 172.23.0.1 - - [10/Aug/2026:16:16:50 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

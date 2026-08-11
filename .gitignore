@@ -1,0 +1,43 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+logs/
+*.log
+
+# Database data
+mongodb_data/
+mongo_data/
+data/
+
+# Docker volumes
+volumes/
+
+# Ollama models
+ollama/models/
+*.gguf
+
+# n8n data
+.n8n/
+
+# Generated files
+reports/
+tmp/
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

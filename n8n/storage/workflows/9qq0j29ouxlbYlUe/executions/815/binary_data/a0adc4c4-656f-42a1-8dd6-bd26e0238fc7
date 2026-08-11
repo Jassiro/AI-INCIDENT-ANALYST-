@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:47:47.083Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Une erreur de 404 est identifiée au début du log
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity high">
+      High
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    Une requête à l'URL / a été envoyée, mais la réponse n'est pas une 200 (OK).
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Lorsqu'on rencontre une requête à un URL non spécifié ou sur laquelle aucune information n'a été fournie dans le log, cela indique probablement que l'application est en mode debug et que la réponse ne fournit pas toutes les informations nécessaires pour s'assurer que l'appel ait réussi. Cela pourrait signifier qu'il y a un bug ou une problématique qui n'a pas été identifiée au niveau d'un seul appel, mais elle n'est pas généralement très grave. Lorsque cela se produit, il est recommandé de vérifier l'URL, les informations dans la réponse et de faire des recherches supplémentaires pour identifier le problème.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786376672450662727] (nginx) 172.23.0.1 - - [10/Aug/2026:15:44:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

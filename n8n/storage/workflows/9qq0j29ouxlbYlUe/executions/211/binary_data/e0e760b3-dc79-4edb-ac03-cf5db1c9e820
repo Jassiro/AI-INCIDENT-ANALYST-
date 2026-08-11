@@ -1,0 +1,9 @@
+
+<h1>Rapport d'Incident SOC</h1>
+<p><b>Date :</b> 2026-08-02T14:03:14.692Z</p>
+<p><b>Type d'incident :</b> Erreur 404</p>
+<p><b>Sévérité :</b> Medium</p>
+<p><b>Cause probable :</b> L'utilisateur a tenté d'accéder à une ressource non disponible sur le serveur Nginx.</p>
+<p><b>Recommandations :</b> Vérifier si les fichiers demandés par l'URL sont bien présents et correctement configurés dans nginx.conf.</p>
+<h3>Logs concernés</h3>
+<pre>[1785679284694739340] (nginx) 172.23.0.1 - - [02/Aug/2026:14:01:24 +0000] "GET /users HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"</pre>

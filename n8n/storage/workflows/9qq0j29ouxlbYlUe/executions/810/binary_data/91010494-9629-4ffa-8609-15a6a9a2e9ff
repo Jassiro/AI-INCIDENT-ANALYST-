@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:47:15.085Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Uniquement un 404
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity medium">
+      Medium
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    Malheureusement, le log n'est pas suffisamment complet pour déterminer précisément l'incident ou la source exacte de ce type de 404. Il est nécessaire d'avoir plus d'informations sur la configuration et les sources des 404.
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Lorsque possible, c'est une erreur de structure ou un problème de configuration. Pour résoudre ce problème, vous devrez vérifier les configurations DNS, les serveurs hostels, etc., afin d'assurer que les serveurs et les serveurs hostels sont correctement configurés.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786376672450662727] (nginx) 172.23.0.1 - - [10/Aug/2026:15:44:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

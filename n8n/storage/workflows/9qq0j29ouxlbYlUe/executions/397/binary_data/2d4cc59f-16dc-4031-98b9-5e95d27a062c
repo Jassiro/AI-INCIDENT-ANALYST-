@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-09T16:12:55.069Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Un utilisateur a accès à un site Web spécifique via une URL non spécifiée de manière 404.
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity medium">
+      Medium
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    L'incident est causé par l'accès direct à un site web non conçu ou mis en place avec des techniques pour produire une réponse 404.
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Il s'agit d'un accès via une URL non spécifiée, ce qui pourrait être une source de perturbation ou un incident inapproprié. Avoir accès direct à des sites web est un atout positif et doit être considéré comme une amélioration continue pour les systèmes Web.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786291960906561450] (nginx) 172.23.0.1 - - [09/Aug/2026:16:12:40 +0000] "GET /test-medium-404 HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

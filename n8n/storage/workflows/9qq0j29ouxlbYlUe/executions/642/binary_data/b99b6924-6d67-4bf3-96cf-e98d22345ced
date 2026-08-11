@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #1f2937;
+    }
+
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .high {
+      color: #b91c1c;
+    }
+
+    .medium {
+      color: #b45309;
+    }
+
+    .critical {
+      color: #7f1d1d;
+    }
+
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Rapport d'Incident SOC</h1>
+
+  <p>
+    <b>Date :</b>
+    2026-08-10T15:25:13.723Z
+  </p>
+
+  <p>
+    <b>Type d'incident :</b>
+    Une source spécifique est suspectée de rendre l'URL / HTTP/1.1 GET impossible à accéder.
+  </p>
+
+  <p>
+    <b>Sévérité :</b>
+    <span class="severity medium">
+      Medium
+    </span>
+  </p>
+
+  <h3>Cause probable</h3>
+
+  <p>
+    La source qui rend l'URL impossible à accéder est un serveur web mal configuré ou mis en service.
+  </p>
+
+  <h3>Recommandation</h3>
+
+  <p>
+    Le site web doit être correctement configuré pour éviter les HTTP/1.1 GET impossible à accéder.
+  </p>
+
+  <h3>Logs concernés</h3>
+
+  <pre>[1786374391642027337] (nginx) 172.23.0.1 - - [10/Aug/2026:15:06:31 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+
+</div>
+
+</body>
+</html>

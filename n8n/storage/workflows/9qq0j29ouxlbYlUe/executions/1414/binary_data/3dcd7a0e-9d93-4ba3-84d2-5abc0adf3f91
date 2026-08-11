@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Incident SOC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #1f2937;
+    }
+    .severity {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .high {
+      color: #b91c1c;
+    }
+    .medium {
+      color: #b45309;
+    }
+    .critical {
+      color: #7f1d1d;
+    }
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Rapport d'Incident SOC</h1>
+  <p><b>Date :</b> 2026-08-11T07:26:58.073Z</p>
+  <p><b>Type d'incident :</b> [1786433197210377783] (nginx)</p>
+  <p><b>Sévérité :</b> <span class="severity medium">MEDIUM</span></p>
+  <h3>Cause probable</h3>
+  <p>Multiple 404</p>
+  <h3>Recommandation</h3>
+  <p>Analyze the logs for more details and identify potential sources of these 404 errors.</p>
+  <h3>Logs concernés</h3>
+  <pre>[1786433197210403593] (nginx) 172.23.0.1 - - [11/Aug/2026:07:26:37 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786433197210377783] (nginx) 172.23.0.1 - - [11/Aug/2026:07:26:36 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786433196959403852] (nginx) 172.23.0.1 - - [11/Aug/2026:07:26:36 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+[1786433196709596731] (nginx) 172.23.0.1 - - [11/Aug/2026:07:26:36 +0000] "GET /admin HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"</pre>
+</div>
+</body>
+</html>
