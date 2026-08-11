@@ -41,3 +41,7 @@ tmp/
 # OS
 .DS_Store
 Thumbs.db
+# n8n local database
+n8n/database.sqlite
+n8n/database.sqlite-shm
+n8n/database.sqlite-wal
